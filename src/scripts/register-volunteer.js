@@ -216,5 +216,5 @@ registerForm.addEventListener('submit', (e) => {
     }
     ]))
 
-    location.href = "login.html"
+    location.href = "/ong-vol/src/pages/login.html"
 })
