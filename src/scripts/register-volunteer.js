@@ -7,7 +7,7 @@ import { randomUUID } from "./utils/randomUUID.js"
 const session = JSON.parse(window.localStorage.getItem('@ong-vol:session'));
 
 if (!session) {
-    window.location.href = "login.html";
+    window.location.href = "/ong-vol/src/pages/login.html";
 }
 
 let isRegisterFormValid = false
