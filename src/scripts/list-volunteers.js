@@ -11,8 +11,6 @@ input.addEventListener('input', () => {
 });
 
 
-
-
 function createVolunteerCard(volunteer) {
     return `
       <li class="team">
@@ -28,11 +26,14 @@ function createVolunteerCard(volunteer) {
             ${volunteer.city}, ${volunteer.state}, ${volunteer.cep}<br />
             Brasil
           </p>
+          <button id="delete-${volunteer.id}">Excluir</button>
         </div>
         <hr class="team__separator" />
       </li>
     `;
 }
+
+
 
 // Função para renderizar todos os volunteers na lista
 function renderVolunteers(query = '') {
@@ -73,5 +74,37 @@ function renderVolunteers(query = '') {
     }
 }
 
+function deleteVolunteer(id) {
+    const storedData = localStorage.getItem('@ong-vol:volunteers');
+    if (!storedData) return;
+
+    try {
+        const volunteers = JSON.parse(storedData);
+        const updatedVolunteers = volunteers.filter(volunteer => volunteer.id !== id);
+
+        localStorage.setItem('@ong-vol:volunteers', JSON.stringify(updatedVolunteers));
+        renderVolunteers(''); // Atualiza a lista na tela
+    } catch (error) {
+        console.error('Erro ao deletar voluntário:', error);
+    }
+}
+
+
+function deleteAll(){
+    localStorage.removeItem('@ong-vol:volunteers')
+    renderVolunteers('')
+}
 
 renderVolunteers('')
+
+const deleteButtons = document.querySelectorAll('button[id^="delete-"]');
+
+deleteButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const id = button.id.replace('delete-', '');
+    deleteVolunteer(id);
+  });
+});
+
+const btn = document.getElementById('delete-all');
+btn.addEventListener('click', deleteAll);

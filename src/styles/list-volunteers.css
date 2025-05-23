@@ -112,6 +112,20 @@
     width: 100%;
 }
 
+button {
+    display: flex;
+    cursor: pointer;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-500);
+    padding-inline: 16px;
+    padding-block: 8px;
+    border-radius: 4px;
+    height: 34px;
+    color: var(--neutral-60);
+}
+
 .search__container {
     display: flex;
     justify-content: center;
