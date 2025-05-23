@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="../scripts/register.js" type="module" defer></script>
+    <title>ONG vol | Cadastro</title>
+</head>
+
+<body>
+    <main class="auth">
+        <form class="form" id="register-form">
+            <fieldset class="form__container">
+              <legend class="form__title"><span>Criar</span> uma conta</legend>
+              <p class="form__description">Insira suas informações para criar uma conta.</p>
+          
+              <label class="form__input" for="register-name">
+                <span>Usuário</span>
+                <input type="text" name="name" id="register-name" placeholder="Insira seu nome">
+                <span class="input-error" id="register-name-error"></span>
+              </label>
+          
+              <label class="form__input" for="register-password">
+                <span>Senha</span>
+                <input type="password" name="password" id="register-password" placeholder="Insira sua senha">
+                <span class="input-error" id="register-password-error"></span>
+              </label>
+          
+              <label class="form__input" for="register-confirm-password">
+                <span>Confirmar senha</span>
+                <input type="password" name="confirm_password" id="register-confirm-password" placeholder="Confirme sua senha">
+                <span class="input-error" id="register-confirm-password-error"></span>
+              </label>
+            </fieldset>
+          
+            <button type="submit" class="form__button">Cadastrar voluntário</button>
+
+            <span class="form__links">
+                Já tem uma conta?
+                <a href="./login.html">Entre</a>
+              </span>
+          </form>
+          
+    </main>
+</body>
+
+</html>

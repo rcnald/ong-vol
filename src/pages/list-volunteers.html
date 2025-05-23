@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/list-volunteers.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <script src="../scripts/list-volunteers.js" type="module" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img class="logo__icon" src="../assets/logo.svg" alt="Logo da ONG" />
+            <span class="logo__name">ONG <b>vol</b></span>
+        </div>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./register-volunteer.html">Cadastrar voluntário</a></li>
+                <li class="nav__item"><a href="./list-volunteers.html">Listar voluntários</a></li>
+            </ul>
+        </nav>
+
+        <a href="/" onclick="localStorage.removeItem('@ong-vol:session')">Sair</a>
+    </header>
+
+    <main class="home">
+        <div class="home__header">
+            <h1 class="home__title"><span>Voluntarios</span> cadastrados</h1>
+            <p class="home__description">Veja suas informações para contato</p>
+        </div>
+
+        <div class="home__container">
+            <form action="" class="home__search">
+                <label class="search__container" for="">
+                    <input id="search" class="search__input" type="text" placeholder="Pesquise equipes pelo nome">
+                </label>
+            </form>
+
+            <ul class="grid" id="volunteers-list">
+
+                <li class="team">
+                    <img src="https://source.unsplash.com/160x160/?volunteer" alt="Foto de Rodrigo" />
+                    <div class="team__container">
+                        <h1>Rodrigo</h1>
+                        <p>📧 rodrigo@email.com</p>
+                        <p>
+                            🏠 Rua das Flores, 123, Apt 45<br />
+                            São Paulo, SP, 01234-567<br />
+                            Brasil
+                        </p>
+                    </div>
+                    <hr class="team__separator" />
+                </li>
+
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

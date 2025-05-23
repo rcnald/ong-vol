@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/login.css">
+  <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="../scripts/login.js" defer></script>
+  <title>ONG vol | Login</title>
+</head>
+
+<body>
+  <main class="auth">
+    <form class="form" id="login-form">
+      <fieldset class="form__container">
+        <legend class="form__title"><span>Entrar</span> na sua conta</legend>
+        <p class="form__description">Insira seu nome de usuário abaixo para entrar na sua conta.</p>
+        
+        <label class="form__input" for="login-name">
+          <span>Nome de usuário</span>
+          <input type="text" name="name" id="login-name" placeholder="Seu nome de usuário">
+          <span class="input-error" id="login-name-error"></span>
+        </label>
+
+        <label class="form__input" for="login-password">
+          <span>Senha</span>
+          <input type="password" name="password" id="login-password" placeholder="Insira sua senha">
+          <span class="input-error" id="login-password-error"></span>
+        </label>
+      </fieldset>
+
+      <button form="login-form" type="submit" class="form__button">Entrar</button>
+
+      <span class="form__links">
+        <a href="./register.html">Cadastre-se</a>
+      </span>
+    </form>
+  </main>
+</body>
+
+</html>
