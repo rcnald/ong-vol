@@ -1,7 +1,7 @@
 const session = JSON.parse(window.localStorage.getItem('@ong-vol:session'));
 
 if (session) {
-  window.location.href = "/ong-vol/src/pages/list-volunteer.html";
+  window.location.href = "/ong-vol/src/pages/list-volunteers.html";
 }
 
 let isLoginFormValid = false;
@@ -55,7 +55,7 @@ loginForm.addEventListener('submit', (e) => {
   if (account) {
     if (account.password === password) {
       window.localStorage.setItem('@ong-vol:session', JSON.stringify({ id: account.id }));
-      return window.location.href = "/ong-vol/src/pages/list-volunteer.html";
+      return window.location.href = "/ong-vol/src/pages/list-volunteers.html";
     }
 
     return alert("Credenciais inválidas!");
